@@ -1,0 +1,15 @@
+{% extends "_base.html" %}
+
+{% block content %}
+
+<form action="{{ url_for('ocr') }}" method=post enctype=multipart/form-data>
+  <div class="form-group">
+    <input type=file  class="form-control input-lg" name=file>
+  </div>
+  <input type=submit class="btn btn-lg btn-block btn-success boom" value=Upload>
+  <div class="form-group">
+    <input type=text class="btn btn-lg" value="{{result}}">
+  </div>
+</form>
+
+{% endblock %}
