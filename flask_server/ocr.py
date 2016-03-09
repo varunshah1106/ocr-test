@@ -1,73 +1,81 @@
-import argparse
-import base64
+from __future__ import print_function
+import httplib2
 import os
-import re
-import sys
+import base64
+from PIL import Image
+from pytesseract import image_to_string
+from apiclient.http import MediaFileUpload
+from apiclient import discovery
+import oauth2client
+from oauth2client import client
+from oauth2client import tools
 
-from googleapiclient import discovery
-from googleapiclient import errors
-import nltk
-from nltk.stem.snowball import EnglishStemmer
-from oauth2client.client import GoogleCredentials
+try:
+    import argparse
+    flags = argparse.ArgumentParser(parents=[tools.argparser]).parse_args()
+except ImportError:
+    flags = None
 
-DISCOVERY_URL = 'https://{api}.googleapis.com/$discovery/rest?version={apiVersion}'  # noqa
-BATCH_SIZE = 10
+# If modifying these scopes, delete your previously saved credentials
+# at ~/.credentials/drive-python-quickstart.json
+SCOPES = 'https://www.googleapis.com/auth/drive'
+CLIENT_SECRET_FILE = 'client_secret.json'
+APPLICATION_NAME = 'Drive API Python Quickstart'
 
 
 class VisionApi:
-    """Construct and use the Google Vision API service."""
+    def __init__(self):
+        self.credentials = self.get_credentials()
 
-    def __init__(self, api_discovery_file='vision_api.json'):
-        self.credentials = GoogleCredentials.get_application_default()
-        self.service = discovery.build(
-            'vision', 'v1', credentials=self.credentials,
-            discoveryServiceUrl=DISCOVERY_URL)
+    def get_credentials(self):
+        """Gets valid user credentials from storage.
 
-    def detect_text(self, image, num_retries=3, max_results=6):
-        """Uses the Vision API to detect text in the given file.
+        If nothing has been stored, or if the stored credentials are invalid,
+        the OAuth2 flow is completed to obtain the new credentials.
 
-        images = {}
-        for filename in input_filenames:
-            with open(filename, 'rb') as image_file:
-                images[filename] = image_file.read()
+        Returns:
+            Credentials, the obtained credential.
         """
-        #print image_base64
-        batch_request = []
-        batch_request.append({
-            'image': {
-                'content': base64.b64encode(image)
-            },
-            'features': [{
-                'type': 'TEXT_DETECTION',
-                'maxResults': max_results,
-            }]
-        })
+        home_dir = os.path.expanduser('~')
+        credential_dir = os.path.join(home_dir, '.credentials')
+        if not os.path.exists(credential_dir):
+            os.makedirs(credential_dir)
+        credential_path = os.path.join(credential_dir,
+                                       'drive-python-quickstart.json')
 
-        request = self.service.images().annotate(
-            body={'requests': batch_request})
-        responses = request.execute(num_retries=num_retries)
-        return responses['responses']
+        store = oauth2client.file.Storage(credential_path)
+        credentials = store.get()
+        if not credentials or credentials.invalid:
+            flow = client.flow_from_clientsecrets(CLIENT_SECRET_FILE, SCOPES)
+            flow.user_agent = APPLICATION_NAME
+            if flags:
+                credentials = tools.run_flow(flow, store, flags)
+            else: # Needed only for compatibility with Python 2.6
+                credentials = tools.run(flow, store)
+            print('Storing credentials to ' + credential_path)
+        return credentials
+
+    def ocr(self, image):
+        """Shows basic usage of the Google Drive API.
+
+        Creates a Google Drive API service object and outputs the names and IDs
+        for up to 10 files.
         """
-        try:
-            responses = request.execute(num_retries=num_retries)
-            if 'responses' not in responses:
-                return {}
-            text_response = {}
-            for filename, response in zip(images, responses['responses']):
-                if 'error' in response:
-                    print("API Error for %s: %s" % (
-                            filename,
-                            response['error']['message']
-                            if 'message' in response['error']
-                            else ''))
-                    continue
-                if 'textAnnotations' in response:
-                    text_response[filename] = response['textAnnotations']
-                else:
-                    text_response[filename] = []
-            return text_response
-        except errors.HttpError, e:
-            print("Http Error for %s: %s" % (filename, e))
-        except KeyError, e2:
-            print("Key error: %s" % e2)
-        """
+        print(image_to_string(Image.open('temp.jpg'), lang='sa'))
+        credentials = self.credentials
+        http = credentials.authorize(httplib2.Http())
+        service = discovery.build('drive', 'v3', http=http)
+        im = Image.open('temp.jpg')
+        im.save('temp.pdf', "PDF", resolution=100.0)
+        media_body = MediaFileUpload('temp.jpg', resumable=True)
+        print(dir(service))
+        body = {
+            'title': 'temp.jpg',
+            'ocr': True
+        }
+        results = service.files().create(
+            body=body, media_body=media_body).execute()
+        file_id = results['id']
+        file = service.files().get(fileId=file_id).execute()
+        print(dir(service.files().create()))
+        print(file)

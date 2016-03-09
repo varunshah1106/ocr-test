@@ -1,602 +1,513 @@
-2016-03-07 03:33:27,615 INFO:             errors [in app.py:52]
-2016-03-07 03:33:36,249 ERROR:             Exception on /v1/ocr [POST] [in /Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py:1423]
+2016-03-08 02:50:58,372 INFO:             errors [in app.py:64]
+2016-03-08 02:51:10,004 ERROR:             Exception on /ocr/ [POST] [in /Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py:1423]
 Traceback (most recent call last):
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
     response = self.full_dispatch_request()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
     reraise(exc_type, exc_value, tb)
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
     rv = self.dispatch_request()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "app.py", line 19, in ocr
-    data = load_data_From_url
-NameError: global name 'load_data_From_url' is not defined
-2016-03-07 03:33:37,776 ERROR:             Exception on /v1/ocr [POST] [in /Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py:1423]
+  File "app.py", line 30, in ocr
+    print response['textAnnotations'][0]['description']
+TypeError: 'NoneType' object has no attribute '__getitem__'
+2016-03-08 03:03:17,878 INFO:             errors [in app.py:64]
+2016-03-08 03:03:29,351 ERROR:             Exception on /ocr/ [POST] [in /Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py:1423]
 Traceback (most recent call last):
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
     response = self.full_dispatch_request()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
     reraise(exc_type, exc_value, tb)
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
     rv = self.dispatch_request()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "app.py", line 19, in ocr
-    data = load_data_From_url
-NameError: global name 'load_data_From_url' is not defined
-2016-03-07 03:33:38,293 ERROR:             Exception on /v1/ocr [POST] [in /Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py:1423]
-Traceback (most recent call last):
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "app.py", line 19, in ocr
-    data = load_data_From_url
-NameError: global name 'load_data_From_url' is not defined
-2016-03-07 03:33:39,596 ERROR:             Exception on /v1/ocr [POST] [in /Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py:1423]
-Traceback (most recent call last):
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "app.py", line 19, in ocr
-    data = load_data_From_url
-NameError: global name 'load_data_From_url' is not defined
-2016-03-07 03:37:18,206 INFO:             errors [in app.py:52]
-2016-03-07 03:42:13,093 INFO:             errors [in app.py:54]
-2016-03-07 03:42:21,041 ERROR:             Exception on /ocr/ [POST] [in /Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py:1423]
-Traceback (most recent call last):
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "app.py", line 22, in ocr
-    response = VisionApi().detect_text(data)
-  File "/Users/varunshah1106/Documents/ocr-test/flask_server/ocr.py", line 21, in __init__
-    self.credentials = GoogleCredentials.get_application_default()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/oauth2client/client.py", line 1384, in get_application_default
-    return GoogleCredentials._get_implicit_credentials()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/oauth2client/client.py", line 1374, in _get_implicit_credentials
-    raise ApplicationDefaultCredentialsError(ADC_HELP_MSG)
-ApplicationDefaultCredentialsError: The Application Default Credentials are not available. They are available if running in Google Compute Engine. Otherwise, the environment variable GOOGLE_APPLICATION_CREDENTIALS must be defined pointing to a file defining the credentials. See https://developers.google.com/accounts/docs/application-default-credentials for more information.
-2016-03-07 03:43:13,903 ERROR:             Exception on /ocr/ [POST] [in /Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py:1423]
-Traceback (most recent call last):
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "app.py", line 22, in ocr
-    response = VisionApi().detect_text(data)
-  File "/Users/varunshah1106/Documents/ocr-test/flask_server/ocr.py", line 21, in __init__
-    self.credentials = GoogleCredentials.get_application_default()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/oauth2client/client.py", line 1384, in get_application_default
-    return GoogleCredentials._get_implicit_credentials()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/oauth2client/client.py", line 1374, in _get_implicit_credentials
-    raise ApplicationDefaultCredentialsError(ADC_HELP_MSG)
-ApplicationDefaultCredentialsError: The Application Default Credentials are not available. They are available if running in Google Compute Engine. Otherwise, the environment variable GOOGLE_APPLICATION_CREDENTIALS must be defined pointing to a file defining the credentials. See https://developers.google.com/accounts/docs/application-default-credentials for more information.
-2016-03-07 03:43:30,733 INFO:             errors [in app.py:54]
-2016-03-07 03:43:35,135 ERROR:             Exception on /ocr/ [POST] [in /Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py:1423]
-Traceback (most recent call last):
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "app.py", line 22, in ocr
-    response = VisionApi().detect_text(data)
-  File "/Users/varunshah1106/Documents/ocr-test/flask_server/ocr.py", line 21, in __init__
-    self.credentials = GoogleCredentials.get_application_default()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/oauth2client/client.py", line 1384, in get_application_default
-    return GoogleCredentials._get_implicit_credentials()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/oauth2client/client.py", line 1374, in _get_implicit_credentials
-    raise ApplicationDefaultCredentialsError(ADC_HELP_MSG)
-ApplicationDefaultCredentialsError: The Application Default Credentials are not available. They are available if running in Google Compute Engine. Otherwise, the environment variable GOOGLE_APPLICATION_CREDENTIALS must be defined pointing to a file defining the credentials. See https://developers.google.com/accounts/docs/application-default-credentials for more information.
-2016-03-07 03:44:24,647 INFO:             errors [in app.py:56]
-2016-03-07 03:44:30,172 ERROR:             Exception on /ocr/ [POST] [in /Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py:1423]
-Traceback (most recent call last):
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "app.py", line 24, in ocr
-    response = VisionApi().detect_text(data)
-  File "/Users/varunshah1106/Documents/ocr-test/flask_server/ocr.py", line 21, in __init__
-    self.credentials = GoogleCredentials.get_application_default()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/oauth2client/client.py", line 1384, in get_application_default
-    return GoogleCredentials._get_implicit_credentials()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/oauth2client/client.py", line 1374, in _get_implicit_credentials
-    raise ApplicationDefaultCredentialsError(ADC_HELP_MSG)
-ApplicationDefaultCredentialsError: The Application Default Credentials are not available. They are available if running in Google Compute Engine. Otherwise, the environment variable GOOGLE_APPLICATION_CREDENTIALS must be defined pointing to a file defining the credentials. See https://developers.google.com/accounts/docs/application-default-credentials for more information.
-2016-03-07 03:44:52,162 ERROR:             Exception on /ocr/ [POST] [in /Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py:1423]
-Traceback (most recent call last):
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "app.py", line 24, in ocr
-    response = VisionApi().detect_text(data)
-  File "/Users/varunshah1106/Documents/ocr-test/flask_server/ocr.py", line 21, in __init__
-    self.credentials = GoogleCredentials.get_application_default()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/oauth2client/client.py", line 1384, in get_application_default
-    return GoogleCredentials._get_implicit_credentials()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/oauth2client/client.py", line 1374, in _get_implicit_credentials
-    raise ApplicationDefaultCredentialsError(ADC_HELP_MSG)
-ApplicationDefaultCredentialsError: The Application Default Credentials are not available. They are available if running in Google Compute Engine. Otherwise, the environment variable GOOGLE_APPLICATION_CREDENTIALS must be defined pointing to a file defining the credentials. See https://developers.google.com/accounts/docs/application-default-credentials for more information.
-2016-03-07 03:45:09,747 INFO:             errors [in app.py:56]
-2016-03-07 03:45:28,043 ERROR:             Exception on /ocr/ [POST] [in /Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py:1423]
-Traceback (most recent call last):
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "app.py", line 21, in ocr
-    print request._get_file_stream()
-TypeError: _get_file_stream() takes at least 3 arguments (1 given)
-2016-03-07 03:46:21,605 INFO:             errors [in app.py:56]
-2016-03-07 03:46:33,984 ERROR:             Exception on /ocr/ [POST] [in /Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py:1423]
-Traceback (most recent call last):
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "app.py", line 24, in ocr
-    response = VisionApi().detect_text(data)
-  File "/Users/varunshah1106/Documents/ocr-test/flask_server/ocr.py", line 21, in __init__
-    self.credentials = GoogleCredentials.get_application_default()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/oauth2client/client.py", line 1384, in get_application_default
-    return GoogleCredentials._get_implicit_credentials()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/oauth2client/client.py", line 1374, in _get_implicit_credentials
-    raise ApplicationDefaultCredentialsError(ADC_HELP_MSG)
-ApplicationDefaultCredentialsError: The Application Default Credentials are not available. They are available if running in Google Compute Engine. Otherwise, the environment variable GOOGLE_APPLICATION_CREDENTIALS must be defined pointing to a file defining the credentials. See https://developers.google.com/accounts/docs/application-default-credentials for more information.
-2016-03-07 03:46:59,766 ERROR:             Exception on /ocr/ [POST] [in /Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py:1423]
-Traceback (most recent call last):
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "app.py", line 24, in ocr
-    response = VisionApi().detect_text(data)
-  File "/Users/varunshah1106/Documents/ocr-test/flask_server/ocr.py", line 21, in __init__
-    self.credentials = GoogleCredentials.get_application_default()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/oauth2client/client.py", line 1384, in get_application_default
-    return GoogleCredentials._get_implicit_credentials()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/oauth2client/client.py", line 1374, in _get_implicit_credentials
-    raise ApplicationDefaultCredentialsError(ADC_HELP_MSG)
-ApplicationDefaultCredentialsError: The Application Default Credentials are not available. They are available if running in Google Compute Engine. Otherwise, the environment variable GOOGLE_APPLICATION_CREDENTIALS must be defined pointing to a file defining the credentials. See https://developers.google.com/accounts/docs/application-default-credentials for more information.
-2016-03-07 03:47:03,220 INFO:             errors [in app.py:57]
-2016-03-07 03:47:07,649 ERROR:             Exception on /ocr/ [POST] [in /Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py:1423]
-Traceback (most recent call last):
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "app.py", line 24, in ocr
-    response = VisionApi().detect_text(data)
-  File "/Users/varunshah1106/Documents/ocr-test/flask_server/ocr.py", line 21, in __init__
-    self.credentials = GoogleCredentials.get_application_default()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/oauth2client/client.py", line 1384, in get_application_default
-    return GoogleCredentials._get_implicit_credentials()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/oauth2client/client.py", line 1374, in _get_implicit_credentials
-    raise ApplicationDefaultCredentialsError(ADC_HELP_MSG)
-ApplicationDefaultCredentialsError: The Application Default Credentials are not available. They are available if running in Google Compute Engine. Otherwise, the environment variable GOOGLE_APPLICATION_CREDENTIALS must be defined pointing to a file defining the credentials. See https://developers.google.com/accounts/docs/application-default-credentials for more information.
-2016-03-07 03:47:36,239 INFO:             errors [in app.py:57]
-2016-03-07 03:49:12,674 INFO:             errors [in app.py:57]
-2016-03-07 03:50:52,468 INFO:             errors [in app.py:57]
-2016-03-07 03:55:10,714 INFO:             errors [in app.py:65]
-2016-03-07 03:55:22,546 ERROR:             Exception on /ocr/ [POST] [in /Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py:1423]
-Traceback (most recent call last):
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "app.py", line 32, in ocr
-    response = VisionApi().detect_text(data)
-  File "/Users/varunshah1106/Documents/ocr-test/flask_server/ocr.py", line 21, in __init__
-    self.credentials = GoogleCredentials.get_application_default()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/oauth2client/client.py", line 1384, in get_application_default
-    return GoogleCredentials._get_implicit_credentials()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/oauth2client/client.py", line 1374, in _get_implicit_credentials
-    raise ApplicationDefaultCredentialsError(ADC_HELP_MSG)
-ApplicationDefaultCredentialsError: The Application Default Credentials are not available. They are available if running in Google Compute Engine. Otherwise, the environment variable GOOGLE_APPLICATION_CREDENTIALS must be defined pointing to a file defining the credentials. See https://developers.google.com/accounts/docs/application-default-credentials for more information.
-2016-03-07 03:55:59,529 INFO:             errors [in app.py:67]
-2016-03-07 03:56:07,630 ERROR:             Exception on /ocr/ [POST] [in /Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py:1423]
-Traceback (most recent call last):
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "app.py", line 34, in ocr
-    response = VisionApi().detect_text(data)
-  File "/Users/varunshah1106/Documents/ocr-test/flask_server/ocr.py", line 21, in __init__
-    self.credentials = GoogleCredentials.get_application_default()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/oauth2client/client.py", line 1384, in get_application_default
-    return GoogleCredentials._get_implicit_credentials()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/oauth2client/client.py", line 1374, in _get_implicit_credentials
-    raise ApplicationDefaultCredentialsError(ADC_HELP_MSG)
-ApplicationDefaultCredentialsError: The Application Default Credentials are not available. They are available if running in Google Compute Engine. Otherwise, the environment variable GOOGLE_APPLICATION_CREDENTIALS must be defined pointing to a file defining the credentials. See https://developers.google.com/accounts/docs/application-default-credentials for more information.
-2016-03-07 03:57:08,295 ERROR:             Exception on /ocr/ [POST] [in /Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py:1423]
-Traceback (most recent call last):
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "app.py", line 34, in ocr
-    response = VisionApi().detect_text(data)
-  File "/Users/varunshah1106/Documents/ocr-test/flask_server/ocr.py", line 21, in __init__
-    self.credentials = GoogleCredentials.get_application_default()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/oauth2client/client.py", line 1384, in get_application_default
-    return GoogleCredentials._get_implicit_credentials()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/oauth2client/client.py", line 1374, in _get_implicit_credentials
-    raise ApplicationDefaultCredentialsError(ADC_HELP_MSG)
-ApplicationDefaultCredentialsError: The Application Default Credentials are not available. They are available if running in Google Compute Engine. Otherwise, the environment variable GOOGLE_APPLICATION_CREDENTIALS must be defined pointing to a file defining the credentials. See https://developers.google.com/accounts/docs/application-default-credentials for more information.
-2016-03-07 03:58:11,697 INFO:             errors [in app.py:67]
-2016-03-07 03:58:26,943 ERROR:             Exception on /ocr/ [POST] [in /Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py:1423]
-Traceback (most recent call last):
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "app.py", line 34, in ocr
-    response = VisionApi().detect_text(image.read())
-  File "/Users/varunshah1106/Documents/ocr-test/flask_server/ocr.py", line 21, in __init__
-    self.credentials = GoogleCredentials.get_application_default()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/oauth2client/client.py", line 1384, in get_application_default
-    return GoogleCredentials._get_implicit_credentials()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/oauth2client/client.py", line 1374, in _get_implicit_credentials
-    raise ApplicationDefaultCredentialsError(ADC_HELP_MSG)
-ApplicationDefaultCredentialsError: The Application Default Credentials are not available. They are available if running in Google Compute Engine. Otherwise, the environment variable GOOGLE_APPLICATION_CREDENTIALS must be defined pointing to a file defining the credentials. See https://developers.google.com/accounts/docs/application-default-credentials for more information.
-2016-03-07 03:59:12,899 INFO:             errors [in app.py:67]
-2016-03-07 03:59:17,549 ERROR:             Exception on /ocr/ [POST] [in /Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py:1423]
-Traceback (most recent call last):
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "app.py", line 34, in ocr
-    response = VisionApi().detect_text(image.read())
-  File "/Users/varunshah1106/Documents/ocr-test/flask_server/ocr.py", line 21, in __init__
-    self.credentials = GoogleCredentials.get_application_default()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/oauth2client/client.py", line 1384, in get_application_default
-    return GoogleCredentials._get_implicit_credentials()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/oauth2client/client.py", line 1374, in _get_implicit_credentials
-    raise ApplicationDefaultCredentialsError(ADC_HELP_MSG)
-ApplicationDefaultCredentialsError: The Application Default Credentials are not available. They are available if running in Google Compute Engine. Otherwise, the environment variable GOOGLE_APPLICATION_CREDENTIALS must be defined pointing to a file defining the credentials. See https://developers.google.com/accounts/docs/application-default-credentials for more information.
-2016-03-07 04:00:12,395 INFO:             errors [in app.py:67]
-2016-03-07 04:00:16,488 ERROR:             Exception on /ocr/ [POST] [in /Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py:1423]
-Traceback (most recent call last):
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "app.py", line 34, in ocr
-    response = VisionApi().detect_text(image.read())
-  File "/Users/varunshah1106/Documents/ocr-test/flask_server/ocr.py", line 21, in __init__
-    self.credentials = GoogleCredentials.get_application_default()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/oauth2client/client.py", line 1384, in get_application_default
-    return GoogleCredentials._get_implicit_credentials()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/oauth2client/client.py", line 1374, in _get_implicit_credentials
-    raise ApplicationDefaultCredentialsError(ADC_HELP_MSG)
-ApplicationDefaultCredentialsError: The Application Default Credentials are not available. They are available if running in Google Compute Engine. Otherwise, the environment variable GOOGLE_APPLICATION_CREDENTIALS must be defined pointing to a file defining the credentials. See https://developers.google.com/accounts/docs/application-default-credentials for more information.
-2016-03-07 04:04:41,959 INFO:             errors [in app.py:67]
-2016-03-07 04:04:48,901 ERROR:             Exception on /ocr/ [POST] [in /Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py:1423]
-Traceback (most recent call last):
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "app.py", line 34, in ocr
-    response = VisionApi().detect_text(image.read())
-  File "/Users/varunshah1106/Documents/ocr-test/flask_server/ocr.py", line 44, in detect_text
-    'maxResults': max_result,
-NameError: global name 'max_result' is not defined
-2016-03-07 04:05:21,374 INFO:             errors [in app.py:66]
-2016-03-07 04:05:47,327 INFO:             errors [in app.py:66]
-2016-03-07 04:06:03,443 INFO:             errors [in app.py:66]
-2016-03-07 04:10:15,912 INFO:             errors [in app.py:61]
-2016-03-07 04:10:49,099 INFO:             errors [in app.py:61]
-2016-03-07 04:19:06,083 INFO:             errors [in app.py:61]
-2016-03-07 04:19:29,128 INFO:             errors [in app.py:61]
-2016-03-07 04:22:31,482 INFO:             errors [in app.py:61]
-2016-03-07 04:24:35,673 INFO:             errors [in app.py:61]
-2016-03-07 04:27:33,058 INFO:             errors [in app.py:62]
-2016-03-07 04:28:41,964 INFO:             errors [in app.py:62]
-2016-03-07 04:29:14,377 INFO:             errors [in app.py:63]
-2016-03-07 04:29:19,678 ERROR:             Exception on /ocr/ [POST] [in /Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py:1423]
-Traceback (most recent call last):
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
   File "app.py", line 29, in ocr
-    response = json.loads(VisionApi().detect_text(image.read()))
-  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/__init__.py", line 338, in loads
-    return _default_decoder.decode(s)
-  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/decoder.py", line 366, in decode
-    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
-TypeError: expected string or buffer
-2016-03-07 04:29:51,376 INFO:             errors [in app.py:64]
-2016-03-07 04:30:21,125 INFO:             errors [in app.py:64]
-2016-03-07 04:30:26,343 ERROR:             Exception on /ocr/ [POST] [in /Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py:1423]
+    response = VisionApi().ocr(image.read())
+  File "/Users/varunshah1106/Documents/ocr-test/flask_server/ocr.py", line 67, in ocr
+    media_body = MediaFileUpload('temp.jpg', resumable=True, ocr=True)
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/oauth2client/util.py", line 137, in positional_wrapper
+    return wrapped(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'ocr'
+2016-03-08 03:04:01,661 INFO:             errors [in app.py:64]
+2016-03-08 03:04:05,754 ERROR:             Exception on /ocr/ [POST] [in /Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py:1423]
 Traceback (most recent call last):
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
     response = self.full_dispatch_request()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
     reraise(exc_type, exc_value, tb)
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
     rv = self.dispatch_request()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
   File "app.py", line 29, in ocr
-    response = json.loads(VisionApi().detect_text(image.read())[0])
-  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/__init__.py", line 338, in loads
-    return _default_decoder.decode(s)
-  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/decoder.py", line 366, in decode
-    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
-TypeError: expected string or buffer
-2016-03-07 04:30:56,495 INFO:             errors [in app.py:66]
-2016-03-07 04:31:00,750 ERROR:             Exception on /ocr/ [POST] [in /Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py:1423]
+    response = VisionApi().ocr(image.read())
+  File "/Users/varunshah1106/Documents/ocr-test/flask_server/ocr.py", line 66, in ocr
+    media_body = MediaFileUpload('temp.jpg', resumable=True, ocr=True)
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/oauth2client/util.py", line 137, in positional_wrapper
+    return wrapped(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'ocr'
+2016-03-08 03:06:59,054 INFO:             errors [in app.py:64]
+2016-03-08 03:07:07,567 ERROR:             Exception on /ocr/ [POST] [in /Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py:1423]
 Traceback (most recent call last):
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
     response = self.full_dispatch_request()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
     reraise(exc_type, exc_value, tb)
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
     rv = self.dispatch_request()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "app.py", line 31, in ocr
-    response = json.loads(response[0])
-  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/__init__.py", line 338, in loads
-    return _default_decoder.decode(s)
-  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/decoder.py", line 366, in decode
-    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
-TypeError: expected string or buffer
-2016-03-07 04:31:37,872 INFO:             errors [in app.py:64]
-2016-03-07 04:31:41,638 ERROR:             Exception on /ocr/ [POST] [in /Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py:1423]
+  File "app.py", line 29, in ocr
+    response = VisionApi().ocr(image.read())
+  File "/Users/varunshah1106/Documents/ocr-test/flask_server/ocr.py", line 71, in ocr
+    results = service.files().insert(
+AttributeError: 'Resource' object has no attribute 'insert'
+2016-03-08 03:07:33,215 INFO:             errors [in app.py:64]
+2016-03-08 03:07:37,985 ERROR:             Exception on /ocr/ [POST] [in /Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py:1423]
 Traceback (most recent call last):
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
     response = self.full_dispatch_request()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
     reraise(exc_type, exc_value, tb)
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
     rv = self.dispatch_request()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "app.py", line 31, in ocr
-    print response[0]['textAnnotations'][0]['description'][0]
-KeyError: 0
-2016-03-07 04:32:28,649 INFO:             errors [in app.py:64]
-2016-03-07 04:32:42,947 ERROR:             Exception on /ocr/ [POST] [in /Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py:1423]
+  File "app.py", line 29, in ocr
+    response = VisionApi().ocr(image.read())
+  File "/Users/varunshah1106/Documents/ocr-test/flask_server/ocr.py", line 71, in ocr
+    results = service.files().insert(
+AttributeError: 'Resource' object has no attribute 'insert'
+2016-03-08 03:09:20,460 INFO:             errors [in app.py:64]
+2016-03-08 03:09:25,022 ERROR:             Exception on /ocr/ [POST] [in /Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py:1423]
 Traceback (most recent call last):
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
     response = self.full_dispatch_request()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
     reraise(exc_type, exc_value, tb)
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
     rv = self.dispatch_request()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "app.py", line 31, in ocr
-    print response[0]['textAnnotations'][0]['description'][0]
-KeyError: 0
-2016-03-07 04:38:24,650 INFO:             errors [in app.py:64]
-2016-03-07 04:38:35,305 ERROR:             Exception on /ocr/ [POST] [in /Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py:1423]
+  File "app.py", line 29, in ocr
+    response = VisionApi().ocr(image.read())
+  File "/Users/varunshah1106/Documents/ocr-test/flask_server/ocr.py", line 71, in ocr
+    results = service.files().insert(
+AttributeError: 'Resource' object has no attribute 'insert'
+2016-03-08 03:09:52,466 INFO:             errors [in app.py:64]
+2016-03-08 03:09:57,497 ERROR:             Exception on /ocr/ [POST] [in /Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py:1423]
 Traceback (most recent call last):
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
     response = self.full_dispatch_request()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
     reraise(exc_type, exc_value, tb)
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
     rv = self.dispatch_request()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "app.py", line 31, in ocr
-    print response[0]['textAnnotations'][0]['description'][0]
-KeyError: 0
-2016-03-07 04:39:18,061 INFO:             errors [in app.py:64]
-2016-03-07 04:52:04,999 INFO:             errors [in app.py:66]
-2016-03-07 04:52:12,885 ERROR:             Exception on /ocr/ [POST] [in /Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py:1423]
+  File "app.py", line 29, in ocr
+    response = VisionApi().ocr(image.read())
+  File "/Users/varunshah1106/Documents/ocr-test/flask_server/ocr.py", line 72, in ocr
+    body=body, media_body=media_body).execute()
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/oauth2client/util.py", line 137, in positional_wrapper
+    return wrapped(*args, **kwargs)
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/googleapiclient/http.py", line 732, in execute
+    _, body = self.next_chunk(http=http, num_retries=num_retries)
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/oauth2client/util.py", line 137, in positional_wrapper
+    return wrapped(*args, **kwargs)
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/googleapiclient/http.py", line 836, in next_chunk
+    raise ResumableUploadError(resp, content)
+ResumableUploadError: <HttpError 403 "Insufficient Permission">
+2016-03-08 03:10:54,241 INFO:             errors [in app.py:64]
+2016-03-08 03:11:00,136 ERROR:             Exception on /ocr/ [POST] [in /Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py:1423]
 Traceback (most recent call last):
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
     response = self.full_dispatch_request()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
     reraise(exc_type, exc_value, tb)
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
     rv = self.dispatch_request()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "app.py", line 44, in ocr
-    print pytesseract.image_to_string(image)
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/pytesseract/pytesseract.py", line 142, in image_to_string
+  File "app.py", line 29, in ocr
+    response = VisionApi().ocr(image.read())
+  File "/Users/varunshah1106/Documents/ocr-test/flask_server/ocr.py", line 72, in ocr
+    body=body, media_body=media_body).execute()
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/oauth2client/util.py", line 137, in positional_wrapper
+    return wrapped(*args, **kwargs)
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/googleapiclient/http.py", line 732, in execute
+    _, body = self.next_chunk(http=http, num_retries=num_retries)
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/oauth2client/util.py", line 137, in positional_wrapper
+    return wrapped(*args, **kwargs)
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/googleapiclient/http.py", line 836, in next_chunk
+    raise ResumableUploadError(resp, content)
+ResumableUploadError: <HttpError 403 "Insufficient Permission">
+2016-03-08 03:12:09,192 INFO:             errors [in app.py:64]
+2016-03-08 03:12:15,527 ERROR:             Exception on /ocr/ [POST] [in /Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 29, in ocr
+    response = VisionApi().ocr(image.read())
+  File "/Users/varunshah1106/Documents/ocr-test/flask_server/ocr.py", line 72, in ocr
+    body=body, media_body=media_body).execute()
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/oauth2client/util.py", line 137, in positional_wrapper
+    return wrapped(*args, **kwargs)
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/googleapiclient/http.py", line 732, in execute
+    _, body = self.next_chunk(http=http, num_retries=num_retries)
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/oauth2client/util.py", line 137, in positional_wrapper
+    return wrapped(*args, **kwargs)
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/googleapiclient/http.py", line 836, in next_chunk
+    raise ResumableUploadError(resp, content)
+ResumableUploadError: <HttpError 403 "Insufficient Permission">
+2016-03-08 03:13:12,495 ERROR:             Exception on /ocr/ [POST] [in /Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 29, in ocr
+    response = VisionApi().ocr(image.read())
+  File "/Users/varunshah1106/Documents/ocr-test/flask_server/ocr.py", line 72, in ocr
+    body=body, media_body=media_body).execute()
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/oauth2client/util.py", line 137, in positional_wrapper
+    return wrapped(*args, **kwargs)
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/googleapiclient/http.py", line 732, in execute
+    _, body = self.next_chunk(http=http, num_retries=num_retries)
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/oauth2client/util.py", line 137, in positional_wrapper
+    return wrapped(*args, **kwargs)
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/googleapiclient/http.py", line 836, in next_chunk
+    raise ResumableUploadError(resp, content)
+ResumableUploadError: <HttpError 403 "Insufficient Permission">
+2016-03-08 03:14:28,072 INFO:             errors [in app.py:64]
+2016-03-08 03:14:44,887 ERROR:             Exception on /ocr/ [POST] [in /Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 30, in ocr
+    print response['textAnnotations'][0]['description']
+TypeError: 'NoneType' object has no attribute '__getitem__'
+2016-03-08 03:17:34,241 INFO:             errors [in app.py:64]
+2016-03-08 03:17:45,304 ERROR:             Exception on /ocr/ [POST] [in /Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 30, in ocr
+    print response['textAnnotations'][0]['description']
+TypeError: 'NoneType' object has no attribute '__getitem__'
+2016-03-08 03:18:05,242 INFO:             errors [in app.py:64]
+2016-03-08 03:18:08,857 ERROR:             Exception on /ocr/ [POST] [in /Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 30, in ocr
+    print response['textAnnotations'][0]['description']
+TypeError: 'NoneType' object has no attribute '__getitem__'
+2016-03-08 03:19:01,468 INFO:             errors [in app.py:64]
+2016-03-08 03:19:07,722 ERROR:             Exception on /ocr/ [POST] [in /Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 30, in ocr
+    print response['textAnnotations'][0]['description']
+TypeError: 'NoneType' object has no attribute '__getitem__'
+2016-03-08 03:22:12,578 INFO:             errors [in app.py:64]
+2016-03-08 03:22:24,593 ERROR:             Exception on /ocr/ [POST] [in /Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 30, in ocr
+    print response['textAnnotations'][0]['description']
+TypeError: 'NoneType' object has no attribute '__getitem__'
+2016-03-08 03:23:50,758 INFO:             errors [in app.py:64]
+2016-03-08 03:23:59,083 ERROR:             Exception on /ocr/ [POST] [in /Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 29, in ocr
+    response = VisionApi().ocr(image.read())
+  File "/Users/varunshah1106/Documents/ocr-test/flask_server/ocr.py", line 71, in ocr
+    body=body, media_body=media_body, ocr=True).execute()
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/googleapiclient/discovery.py", line 676, in method
+    raise TypeError('Got an unexpected keyword argument "%s"' % name)
+TypeError: Got an unexpected keyword argument "ocr"
+2016-03-08 03:24:32,089 INFO:             errors [in app.py:64]
+2016-03-08 03:24:37,032 ERROR:             Exception on /ocr/ [POST] [in /Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 30, in ocr
+    print response['textAnnotations'][0]['description']
+TypeError: 'NoneType' object has no attribute '__getitem__'
+2016-03-08 03:25:02,362 INFO:             errors [in app.py:64]
+2016-03-08 03:25:07,363 ERROR:             Exception on /ocr/ [POST] [in /Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 30, in ocr
+    print response['textAnnotations'][0]['description']
+TypeError: 'NoneType' object has no attribute '__getitem__'
+2016-03-08 03:31:37,563 INFO:             errors [in app.py:64]
+2016-03-08 03:31:47,556 ERROR:             Exception on /ocr/ [POST] [in /Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 30, in ocr
+    print response['textAnnotations'][0]['description']
+TypeError: 'NoneType' object has no attribute '__getitem__'
+2016-03-08 03:33:08,243 INFO:             errors [in app.py:64]
+2016-03-08 03:33:12,854 ERROR:             Exception on /ocr/ [POST] [in /Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 29, in ocr
+    response = VisionApi().ocr(image.read())
+  File "/Users/varunshah1106/Documents/ocr-test/flask_server/ocr.py", line 76, in ocr
+    ocr=True
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/googleapiclient/discovery.py", line 676, in method
+    raise TypeError('Got an unexpected keyword argument "%s"' % name)
+TypeError: Got an unexpected keyword argument "ocr"
+2016-03-08 03:35:40,695 INFO:             errors [in app.py:64]
+2016-03-08 03:35:50,858 ERROR:             Exception on /ocr/ [POST] [in /Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 29, in ocr
+    response = VisionApi().ocr(image.read())
+  File "/Users/varunshah1106/Documents/ocr-test/flask_server/ocr.py", line 75, in ocr
+    print(dir(service.files().insert()))
+AttributeError: 'Resource' object has no attribute 'insert'
+2016-03-08 03:36:04,217 INFO:             errors [in app.py:64]
+2016-03-08 03:36:07,367 ERROR:             Exception on /ocr/ [POST] [in /Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 30, in ocr
+    print response['textAnnotations'][0]['description']
+TypeError: 'NoneType' object has no attribute '__getitem__'
+2016-03-08 03:53:14,792 INFO:             errors [in app.py:64]
+2016-03-08 03:53:39,491 ERROR:             Exception on /ocr/ [POST] [in /Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 30, in ocr
+    print response['textAnnotations'][0]['description']
+TypeError: 'NoneType' object has no attribute '__getitem__'
+2016-03-08 03:54:40,459 INFO:             errors [in app.py:64]
+2016-03-08 03:54:45,215 ERROR:             Exception on /ocr/ [POST] [in /Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 30, in ocr
+    print response['textAnnotations'][0]['description']
+TypeError: 'NoneType' object has no attribute '__getitem__'
+2016-03-08 04:00:10,999 INFO:             errors [in app.py:64]
+2016-03-08 04:00:18,123 ERROR:             Exception on /ocr/ [POST] [in /Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 29, in ocr
+    response = VisionApi().ocr(image.read())
+  File "/Users/varunshah1106/Documents/ocr-test/flask_server/ocr.py", line 76, in ocr
+    body=body, media_body=media_body, convert=True).execute()
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/googleapiclient/discovery.py", line 676, in method
+    raise TypeError('Got an unexpected keyword argument "%s"' % name)
+TypeError: Got an unexpected keyword argument "convert"
+2016-03-08 04:02:01,800 INFO:             errors [in app.py:64]
+2016-03-08 04:02:06,142 ERROR:             Exception on /ocr/ [POST] [in /Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 29, in ocr
+    response = VisionApi().ocr(image.read())
+  File "/Users/varunshah1106/Documents/ocr-test/flask_server/ocr.py", line 76, in ocr
+    body=body, media_body=media_body, convert=True).execute()
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/googleapiclient/discovery.py", line 676, in method
+    raise TypeError('Got an unexpected keyword argument "%s"' % name)
+TypeError: Got an unexpected keyword argument "convert"
+2016-03-08 18:08:39,603 INFO:             errors [in app.py:64]
+2016-03-08 18:08:47,198 ERROR:             Exception on /ocr/ [POST] [in /Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py:1423]
+Traceback (most recent call last):
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 29, in ocr
+    response = VisionApi().ocr(image.read())
+  File "/Users/varunshah1106/Documents/ocr-test/flask_server/ocr.py", line 64, in ocr
+    print(image_to_string(Image.open('temp.jpg'), lang='sa'))
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/pytesseract/pytesseract.py", line 142, in image_to_string
     config=config)
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/pytesseract/pytesseract.py", line 75, in run_tesseract
+  File "/Users/varunshah1106/Documents/ocr-test/env/lib/python2.7/site-packages/pytesseract/pytesseract.py", line 75, in run_tesseract
     stderr=subprocess.PIPE)
   File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/subprocess.py", line 710, in __init__
     errread, errwrite)
   File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/subprocess.py", line 1335, in _execute_child
     raise child_exception
 OSError: [Errno 2] No such file or directory
-2016-03-07 04:53:20,526 INFO:             errors [in app.py:66]
-2016-03-07 04:53:24,302 ERROR:             Exception on /ocr/ [POST] [in /Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py:1423]
-Traceback (most recent call last):
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "app.py", line 44, in ocr
-    print pytesseract.image_to_string(image.read())
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/pytesseract/pytesseract.py", line 137, in image_to_string
-    image.save(input_file_name)
-AttributeError: 'str' object has no attribute 'save'
-2016-03-07 04:53:49,917 INFO:             errors [in app.py:66]
-2016-03-07 04:53:53,624 ERROR:             Exception on /ocr/ [POST] [in /Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py:1423]
-Traceback (most recent call last):
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "app.py", line 44, in ocr
-    pytesseract.image_to_string(image.read())
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/pytesseract/pytesseract.py", line 137, in image_to_string
-    image.save(input_file_name)
-AttributeError: 'str' object has no attribute 'save'
-2016-03-07 04:55:53,289 INFO:             errors [in app.py:66]
-2016-03-07 04:55:57,578 ERROR:             Exception on /ocr/ [POST] [in /Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py:1423]
-Traceback (most recent call last):
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "app.py", line 44, in ocr
-    pytesseract.image_to_string(image.open())
-  File "/Users/varunshah1106/Documents/.ocr/lib/python2.7/site-packages/werkzeug/datastructures.py", line 2595, in __getattr__
-    return getattr(self.stream, name)
-AttributeError: '_io.BytesIO' object has no attribute 'open'

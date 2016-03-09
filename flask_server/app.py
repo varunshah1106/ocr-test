@@ -1,7 +1,6 @@
 import os
 import logging
 import json
-import pytesseract
 from logging import Formatter, FileHandler
 from flask import Flask, request, jsonify, render_template
 
@@ -27,7 +26,7 @@ def main():
 @app.route('/ocr/', methods=["POST"])
 def ocr():
     image = request.files['file']
-    response = VisionApi().detect_text(image.read())[0]
+    response = VisionApi().ocr(image.read())
     print response['textAnnotations'][0]['description']
     #print response[0]['textAnnotations'][0]['description'][0]
     """try:
@@ -41,7 +40,6 @@ def ocr():
         return jsonify(
             {"error": "Did you mean to send: {'image_url': 'some_jpeg_url'}"}
         )"""
-    pytesseract.image_to_string(image.open())
     return render_template('index.html', result=response['textAnnotations'][0]['description'])
 
 
